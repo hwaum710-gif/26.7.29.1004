@@ -6,25 +6,26 @@
     name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
+
   <title>나의 진로 성장 포트폴리오</title>
 
   <style>
-    /* =========================
-       1. 기본 디자인 설정
-       ========================= */
+    /* ==================================================
+       1. 기본 디자인
+       ================================================== */
     :root {
       --navy: #17365d;
       --blue: #3568d4;
-      --teal: #12a594;
+      --teal: #0f9d8a;
       --yellow: #f4b942;
-      --red: #e25454;
-      --purple: #7857c7;
-      --background: #f4f7fb;
+      --purple: #7759c7;
+      --red: #df5555;
+      --background: #f3f6fa;
       --surface: #ffffff;
-      --line: #dce3ed;
-      --text: #1f2937;
-      --muted: #697586;
-      --shadow: 0 10px 30px rgba(24, 54, 93, 0.09);
+      --line: #dce3ec;
+      --text: #202a36;
+      --muted: #687587;
+      --shadow: 0 10px 28px rgba(23, 54, 93, 0.09);
       --radius: 18px;
     }
 
@@ -37,8 +38,11 @@
       color: var(--text);
       background: var(--background);
       font-family:
-        "Pretendard", "Noto Sans KR", "Malgun Gothic",
-        Arial, sans-serif;
+        "Pretendard",
+        "Noto Sans KR",
+        "Malgun Gothic",
+        Arial,
+        sans-serif;
     }
 
     button,
@@ -72,9 +76,9 @@
       color: var(--teal);
     }
 
-    /* =========================
-       2. 공통 버튼과 입력 요소
-       ========================= */
+    /* ==================================================
+       2. 버튼과 입력창
+       ================================================== */
     .btn {
       min-height: 42px;
       padding: 10px 16px;
@@ -115,7 +119,7 @@
 
     label {
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 7px;
       color: var(--navy);
       font-size: 14px;
       font-weight: 800;
@@ -140,6 +144,12 @@
       box-shadow: 0 0 0 3px rgba(53, 104, 212, 0.12);
     }
 
+    input[readonly] {
+      color: var(--muted);
+      background: #eef2f6;
+      cursor: not-allowed;
+    }
+
     textarea {
       min-height: 105px;
       resize: vertical;
@@ -159,38 +169,38 @@
       grid-column: 1 / -1;
     }
 
-    /* =========================
+    /* ==================================================
        3. 로그인 화면
-       ========================= */
+       ================================================== */
     .login-screen {
       min-height: 100vh;
       display: grid;
       place-items: center;
       padding: 24px;
       background:
-        radial-gradient(circle at 20% 20%, #d9fbf5 0, transparent 27%),
-        radial-gradient(circle at 80% 10%, #dce8ff 0, transparent 30%),
-        linear-gradient(135deg, #f6fbff, #f5f7ff);
+        radial-gradient(circle at 15% 15%, #d9fbf5 0, transparent 28%),
+        radial-gradient(circle at 85% 10%, #dce8ff 0, transparent 30%),
+        linear-gradient(135deg, #f7fbff, #f5f7ff);
     }
 
     .login-card {
-      width: min(100%, 470px);
+      width: min(100%, 480px);
       padding: 34px;
-      border-radius: 24px;
+      border-radius: 25px;
       background: white;
       box-shadow: var(--shadow);
     }
 
     .brand-mark {
-      width: 58px;
-      height: 58px;
+      width: 60px;
+      height: 60px;
       display: grid;
       place-items: center;
       margin-bottom: 16px;
       border-radius: 18px;
       color: white;
       background: linear-gradient(135deg, var(--blue), var(--teal));
-      font-size: 29px;
+      font-size: 30px;
     }
 
     .login-card h1 {
@@ -203,7 +213,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 8px;
-      margin: 24px 0 18px;
+      margin: 23px 0 18px;
       padding: 5px;
       border-radius: 14px;
       background: #eef3f8;
@@ -223,47 +233,47 @@
       background: var(--blue);
     }
 
-    .login-help {
-      margin-top: 18px;
+    .help-box {
+      margin-top: 15px;
       padding: 14px;
       border-radius: 14px;
-      color: #466079;
-      background: #f3f8fc;
+      color: #405a73;
+      background: #f1f7fb;
       font-size: 13px;
       line-height: 1.7;
     }
 
-    /* =========================
-       4. 앱 레이아웃
-       ========================= */
+    /* ==================================================
+       4. 앱 전체 화면
+       ================================================== */
     .app {
       min-height: 100vh;
       display: grid;
-      grid-template-columns: 245px 1fr;
+      grid-template-columns: 250px 1fr;
     }
 
     .sidebar {
       position: sticky;
       top: 0;
       height: 100vh;
-      padding: 24px 16px;
+      padding: 23px 16px;
       color: white;
       background: var(--navy);
       overflow-y: auto;
     }
 
     .sidebar-brand {
-      padding: 8px 10px 24px;
+      padding: 8px 10px 23px;
     }
 
     .sidebar-brand strong {
       display: block;
       font-size: 19px;
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .sidebar-brand span {
-      color: #b9cae0;
+      color: #b9cce3;
       font-size: 12px;
     }
 
@@ -276,7 +286,7 @@
       padding: 12px 13px;
       border: 0;
       border-radius: 12px;
-      color: #d9e5f3;
+      color: #dce7f4;
       background: transparent;
       text-align: left;
       font-weight: 800;
@@ -290,8 +300,8 @@
 
     .sidebar-footer {
       margin-top: 22px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      padding-top: 17px;
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
     }
 
     .main {
@@ -316,6 +326,7 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      min-width: 190px;
       padding: 9px 13px;
       border-radius: 14px;
       background: white;
@@ -323,19 +334,20 @@
     }
 
     .avatar {
-      width: 38px;
-      height: 38px;
+      width: 40px;
+      height: 40px;
       display: grid;
       place-items: center;
+      flex: 0 0 auto;
       border-radius: 50%;
       color: white;
       background: var(--teal);
       font-weight: 900;
     }
 
-    /* =========================
-       5. 카드와 대시보드
-       ========================= */
+    /* ==================================================
+       5. 카드와 통계
+       ================================================== */
     .card {
       padding: 21px;
       border: 1px solid #edf0f4;
@@ -344,9 +356,13 @@
       box-shadow: var(--shadow);
     }
 
+    .card h2,
+    .card h3 {
+      color: var(--navy);
+    }
+
     .card h3 {
       margin: 0 0 14px;
-      color: var(--navy);
     }
 
     .stats-grid {
@@ -358,9 +374,26 @@
 
     .stat-card {
       padding: 18px;
+      border-top: 5px solid var(--navy);
       border-radius: 17px;
       background: white;
       box-shadow: var(--shadow);
+    }
+
+    .stat-card.blue {
+      border-top-color: var(--blue);
+    }
+
+    .stat-card.teal {
+      border-top-color: var(--teal);
+    }
+
+    .stat-card.yellow {
+      border-top-color: var(--yellow);
+    }
+
+    .stat-card.purple {
+      border-top-color: var(--purple);
     }
 
     .stat-card .number {
@@ -370,85 +403,12 @@
       font-weight: 900;
     }
 
-    .stat-card.total {
-      border-top: 5px solid var(--navy);
-    }
-
-    .stat-card.job {
-      border-top: 5px solid var(--blue);
-    }
-
-    .stat-card.major {
-      border-top: 5px solid var(--teal);
-    }
-
-    .stat-card.school {
-      border-top: 5px solid var(--yellow);
-    }
-
-    .stat-card.activity {
-      border-top: 5px solid var(--purple);
-    }
-
     .dashboard-grid {
       display: grid;
-      grid-template-columns: 1.25fr 0.75fr;
+      grid-template-columns: 1.2fr 0.8fr;
       gap: 18px;
     }
 
-    .week-track {
-      display: grid;
-      grid-template-columns: repeat(17, minmax(26px, 1fr));
-      gap: 5px;
-      margin-top: 14px;
-    }
-
-    .week {
-      display: grid;
-      place-items: center;
-      min-height: 36px;
-      border-radius: 9px;
-      color: var(--muted);
-      background: #edf1f6;
-      font-size: 11px;
-      font-weight: 900;
-    }
-
-    .week.done {
-      color: white;
-      background: var(--teal);
-    }
-
-    .week.current {
-      color: white;
-      background: var(--blue);
-      outline: 3px solid rgba(53, 104, 212, 0.17);
-    }
-
-    .category-actions {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-    }
-
-    .category-action {
-      padding: 15px;
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      color: var(--navy);
-      background: white;
-      text-align: left;
-      font-weight: 900;
-    }
-
-    .category-action:hover {
-      border-color: var(--blue);
-      background: #f5f8ff;
-    }
-
-    /* =========================
-       6. 누적 기록 및 타임라인
-       ========================= */
     .section-header {
       display: flex;
       align-items: center;
@@ -460,17 +420,24 @@
     .section-header h2,
     .section-header h3 {
       margin: 0;
-      color: var(--navy);
     }
 
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    /* ==================================================
+       6. 기록 카드와 타임라인
+       ================================================== */
     .record-list {
       display: grid;
       gap: 14px;
     }
 
     .record-card {
-      position: relative;
-      padding: 20px;
+      padding: 19px;
       border: 1px solid var(--line);
       border-left: 6px solid var(--blue);
       border-radius: 15px;
@@ -491,21 +458,20 @@
     }
 
     .record-card h3 {
-      margin: 5px 0 9px;
+      margin: 7px 0 11px;
     }
 
     .record-meta {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 10px;
+      gap: 7px;
     }
 
     .badge {
       display: inline-flex;
       padding: 5px 9px;
       border-radius: 999px;
-      color: #27415b;
+      color: #2b445e;
       background: #edf3f8;
       font-size: 12px;
       font-weight: 900;
@@ -520,16 +486,15 @@
 
     .feedback-box {
       margin-top: 13px;
-      padding: 12px;
+      padding: 13px;
       border-radius: 12px;
       color: #38526a;
       background: #edf9f7;
-      font-size: 14px;
       line-height: 1.6;
     }
 
     .empty-state {
-      padding: 45px 20px;
+      padding: 42px 20px;
       border: 2px dashed var(--line);
       border-radius: 18px;
       color: var(--muted);
@@ -537,9 +502,54 @@
       text-align: center;
     }
 
-    /* =========================
-       7. 한눈에 보기
-       ========================= */
+    .category-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 11px;
+    }
+
+    .category-action {
+      min-height: 90px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      color: var(--navy);
+      background: white;
+      text-align: left;
+      font-weight: 900;
+    }
+
+    .category-action:hover {
+      border-color: var(--blue);
+      background: #f5f8ff;
+    }
+
+    /* ==================================================
+       7. 17주 표시와 한눈에 보기
+       ================================================== */
+    .week-track {
+      display: grid;
+      grid-template-columns: repeat(17, minmax(25px, 1fr));
+      gap: 5px;
+      margin-top: 13px;
+    }
+
+    .week {
+      display: grid;
+      place-items: center;
+      min-height: 36px;
+      border-radius: 9px;
+      color: var(--muted);
+      background: #edf1f6;
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .week.done {
+      color: white;
+      background: var(--teal);
+    }
+
     .overview-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -548,16 +558,16 @@
 
     .bar-row {
       display: grid;
-      grid-template-columns: 105px 1fr 35px;
+      grid-template-columns: 115px 1fr 40px;
       align-items: center;
       gap: 10px;
-      margin: 13px 0;
+      margin: 14px 0;
     }
 
     .bar-track {
-      height: 13px;
+      height: 14px;
       border-radius: 99px;
-      background: #e8edf4;
+      background: #e7edf4;
       overflow: hidden;
     }
 
@@ -567,25 +577,31 @@
       background: linear-gradient(90deg, var(--blue), var(--teal));
     }
 
+    .insight {
+      padding: 17px;
+      border-radius: 15px;
+      background: linear-gradient(135deg, #edf4ff, #edfcf8);
+    }
+
     .timeline {
       position: relative;
-      padding-left: 25px;
+      padding-left: 27px;
     }
 
     .timeline::before {
       content: "";
       position: absolute;
-      top: 3px;
-      bottom: 3px;
-      left: 7px;
+      top: 5px;
+      bottom: 5px;
+      left: 8px;
       width: 3px;
-      border-radius: 4px;
-      background: #dce4ee;
+      border-radius: 5px;
+      background: #dbe4ed;
     }
 
     .timeline-item {
       position: relative;
-      margin-bottom: 17px;
+      margin-bottom: 15px;
       padding: 15px;
       border-radius: 14px;
       background: #f8fafc;
@@ -595,7 +611,7 @@
       content: "";
       position: absolute;
       top: 18px;
-      left: -24px;
+      left: -25px;
       width: 12px;
       height: 12px;
       border: 3px solid white;
@@ -604,23 +620,18 @@
       box-shadow: 0 0 0 2px var(--blue);
     }
 
-    .insight {
-      padding: 16px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #edf4ff, #edfdf9);
-    }
-
-    /* =========================
-       8. 교사 관리 화면
-       ========================= */
+    /* ==================================================
+       8. 교사 화면과 표
+       ================================================== */
     .teacher-layout {
       display: grid;
-      grid-template-columns: 1fr 0.95fr;
+      grid-template-columns: 1.15fr 0.85fr;
       gap: 18px;
     }
 
     .table-wrap {
-      overflow-x: auto;
+      max-height: 680px;
+      overflow: auto;
     }
 
     table {
@@ -631,15 +642,18 @@
 
     th,
     td {
-      padding: 12px;
+      padding: 11px;
       border-bottom: 1px solid var(--line);
       text-align: left;
       white-space: nowrap;
     }
 
     th {
+      position: sticky;
+      top: 0;
+      z-index: 1;
       color: var(--navy);
-      background: #f1f5f9;
+      background: #eef3f8;
       font-size: 13px;
     }
 
@@ -651,9 +665,23 @@
       background: #edf4ff !important;
     }
 
-    /* =========================
+    .account-box {
+      margin-bottom: 18px;
+      padding: 15px;
+      border-radius: 14px;
+      background: #f2f7fb;
+      line-height: 1.8;
+    }
+
+    .password-value {
+      font-family: Consolas, monospace;
+      font-weight: 900;
+      color: var(--red);
+    }
+
+    /* ==================================================
        9. 모달
-       ========================= */
+       ================================================== */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -661,7 +689,7 @@
       display: grid;
       place-items: center;
       padding: 18px;
-      background: rgba(14, 29, 50, 0.56);
+      background: rgba(14, 29, 50, 0.58);
     }
 
     .modal {
@@ -674,22 +702,27 @@
       overflow-y: auto;
     }
 
+    .profile-modal {
+      width: min(580px, 100%);
+    }
+
     .modal-header {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 15px;
       margin-bottom: 18px;
     }
 
     .modal-header h2 {
-      margin: 0;
+      margin: 0 0 7px;
       color: var(--navy);
     }
 
     .close-button {
       width: 40px;
       height: 40px;
+      flex: 0 0 auto;
       border: 0;
       border-radius: 50%;
       color: var(--navy);
@@ -697,15 +730,25 @@
       font-size: 20px;
     }
 
-    /* =========================
-       10. 알림 메시지
-       ========================= */
+    .nickname-examples {
+      margin-top: 9px;
+      padding: 13px;
+      border-radius: 13px;
+      color: #405970;
+      background: #eef7fa;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    /* ==================================================
+       10. 알림
+       ================================================== */
     .toast {
       position: fixed;
       right: 20px;
       bottom: 20px;
       z-index: 200;
-      min-width: 260px;
+      min-width: 270px;
       padding: 14px 18px;
       border-radius: 13px;
       color: white;
@@ -714,10 +757,10 @@
       font-weight: 800;
     }
 
-    /* =========================
+    /* ==================================================
        11. 반응형 화면
-       ========================= */
-    @media (max-width: 1050px) {
+       ================================================== */
+    @media (max-width: 1100px) {
       .stats-grid {
         grid-template-columns: repeat(3, 1fr);
       }
@@ -739,10 +782,6 @@
         height: auto;
       }
 
-      .sidebar-brand {
-        padding-bottom: 14px;
-      }
-
       .sidebar nav {
         display: flex;
         gap: 7px;
@@ -758,7 +797,7 @@
       }
 
       .main {
-        padding: 17px;
+        padding: 16px;
       }
 
       .stats-grid,
@@ -776,13 +815,18 @@
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
 
     @media print {
       .sidebar,
-      .topbar button,
+      .topbar,
       .record-actions,
-      .screen-actions {
+      .button-row {
         display: none !important;
       }
 
@@ -804,15 +848,17 @@
 </head>
 
 <body>
-  <!-- =========================
+  <!-- ==================================================
        로그인 화면
-       ========================= -->
+       ================================================== -->
   <section id="loginScreen" class="login-screen">
     <div class="login-card">
       <div class="brand-mark">🧭</div>
+
       <h1>나의 진로 성장 포트폴리오</h1>
+
       <p class="muted">
-        탐색하고, 기록하고, 나의 변화를 발견해 보세요.
+        탐색하고 기록하며 나의 진로 성장을 발견해 보세요.
       </p>
 
       <div class="role-tabs">
@@ -838,22 +884,24 @@
       <form id="loginForm" onsubmit="login(event)">
         <div class="form-group">
           <label for="loginId">아이디</label>
+
           <input
             id="loginId"
             type="text"
-            autocomplete="username"
             placeholder="예: 1-1-01"
+            autocomplete="username"
             required
           >
         </div>
 
         <div class="form-group">
           <label for="loginPassword">비밀번호</label>
+
           <input
             id="loginPassword"
             type="password"
-            autocomplete="current-password"
             placeholder="비밀번호를 입력하세요"
+            autocomplete="current-password"
             required
           >
         </div>
@@ -861,10 +909,10 @@
         <div class="form-group">
           <label>
             <input
-              id="showPassword"
+              id="showLoginPassword"
               type="checkbox"
               style="width:auto;"
-              onchange="togglePassword()"
+              onchange="toggleLoginPassword()"
             >
             비밀번호 보기
           </label>
@@ -875,21 +923,21 @@
         </button>
       </form>
 
-      <div class="login-help">
-        <strong>학생 아이디 규칙</strong><br>
-        학년-반-번호로 구성됩니다. 예: 1학년 1반 1번은
-        <strong>1-1-01</strong>입니다.<br>
-        최초 비밀번호는 <strong>1234</strong>이며, 교사가 언제든지
-        초기화할 수 있습니다.
+      <div class="help-box">
+        <strong>학생 최초 로그인</strong><br>
+        아이디는 학년-반-번호입니다.<br>
+        예: 1학년 1반 1번 → <strong>1-1-01</strong><br>
+        최초 비밀번호는 <strong>1234</strong>입니다.<br>
+        로그인 후 본명, 진로 별명, 새 비밀번호를 등록합니다.
       </div>
 
       <p id="loginMessage" class="danger-text small"></p>
     </div>
   </section>
 
-  <!-- =========================
+  <!-- ==================================================
        로그인 이후 앱 화면
-       ========================= -->
+       ================================================== -->
   <div id="appScreen" class="app hidden">
     <aside class="sidebar">
       <div class="sidebar-brand">
@@ -901,40 +949,60 @@
         <button class="nav-button active" data-view="dashboard">
           🏠 나의 홈
         </button>
+
         <button class="nav-button" data-view="job">
           💼 직업 탐색
         </button>
+
         <button class="nav-button" data-view="major">
           📚 학과 탐색
         </button>
+
         <button class="nav-button" data-view="highschool">
           🏫 고등학교 탐색
         </button>
+
         <button class="nav-button" data-view="university">
           🎓 대학교 탐색
         </button>
+
         <button class="nav-button" data-view="activity">
           🌱 진로 체험·활동
         </button>
+
         <button class="nav-button" data-view="overview">
           📊 성장 한눈에 보기
         </button>
+
         <button class="nav-button" data-view="timeline">
           🗂️ 전체 포트폴리오
+        </button>
+
+        <button
+          class="nav-button"
+          type="button"
+          onclick="openProfileModal(false)"
+        >
+          ⚙️ 내 정보 수정
         </button>
       </nav>
 
       <nav id="teacherNavigation" class="hidden">
         <button class="nav-button active" data-view="teacher">
-          📋 학생 관리
+          📋 학생 계정·기록 관리
         </button>
+
         <button class="nav-button" data-view="teacherOverview">
-          📈 학급 현황
+          📈 학급별 현황
         </button>
       </nav>
 
       <div class="sidebar-footer">
-        <button class="nav-button" type="button" onclick="logout()">
+        <button
+          class="nav-button"
+          type="button"
+          onclick="logout()"
+        >
           🚪 로그아웃
         </button>
       </div>
@@ -944,6 +1012,7 @@
       <header class="topbar">
         <div>
           <h2 id="pageTitle">나의 진로 포트폴리오</h2>
+
           <div id="pageSubtitle" class="muted">
             오늘의 관심을 미래의 기록으로 남겨 보세요.
           </div>
@@ -951,6 +1020,7 @@
 
         <div class="user-chip">
           <div id="userAvatar" class="avatar">학</div>
+
           <div>
             <strong id="userName">학생</strong>
             <div id="userRoleText" class="small muted">학생</div>
@@ -962,13 +1032,146 @@
     </main>
   </div>
 
-  <!-- =========================
+  <!-- ==================================================
+       학생 최초 로그인·정보 수정 모달
+       ================================================== -->
+  <div id="profileModal" class="modal-backdrop hidden">
+    <div class="modal profile-modal">
+      <div class="modal-header">
+        <div>
+          <h2 id="profileModalTitle">처음 로그인 설정</h2>
+
+          <p id="profileModalDescription" class="muted small">
+            본명, 진로 별명, 새 비밀번호를 등록하세요.
+          </p>
+        </div>
+
+        <button
+          id="profileCloseButton"
+          class="close-button"
+          type="button"
+          onclick="closeProfileModal()"
+          aria-label="닫기"
+        >
+          ×
+        </button>
+      </div>
+
+      <form id="profileForm" onsubmit="saveStudentProfile(event)">
+        <div class="form-group">
+          <label for="profileId">아이디</label>
+
+          <input
+            id="profileId"
+            type="text"
+            readonly
+          >
+
+          <p class="small muted">
+            아이디는 학년-반-번호로 유지되며 변경할 수 없습니다.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="profileRealName">본명</label>
+
+          <input
+            id="profileRealName"
+            type="text"
+            maxlength="20"
+            placeholder="예: 홍길동"
+            autocomplete="name"
+            required
+          >
+
+          <p class="small muted">
+            출석부에 등록된 실제 이름을 입력하세요.
+          </p>
+        </div>
+
+        <div class="form-group">
+          <label for="profileNickname">나의 꿈을 담은 진로 별명</label>
+
+          <input
+            id="profileNickname"
+            type="text"
+            maxlength="40"
+            placeholder="예: 멋진 홍길동, 변호사 홍길동"
+            required
+          >
+
+          <div class="nickname-examples">
+            <strong>진로 별명 예시</strong><br>
+            멋진 홍길동 · 변호사 홍길동 · 웹 개발자 김하늘<br>
+            동물을 사랑하는 수의사 이바다<br>
+            우주를 탐험하는 과학자 박우주<br>
+            사람을 돕는 상담사 최마음
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="profilePassword">새 비밀번호</label>
+
+          <input
+            id="profilePassword"
+            type="password"
+            minlength="4"
+            maxlength="20"
+            placeholder="4자 이상 입력하세요"
+            autocomplete="new-password"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="profilePasswordConfirm">새 비밀번호 확인</label>
+
+          <input
+            id="profilePasswordConfirm"
+            type="password"
+            minlength="4"
+            maxlength="20"
+            placeholder="같은 비밀번호를 한 번 더 입력하세요"
+            autocomplete="new-password"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input
+              id="showProfilePassword"
+              type="checkbox"
+              style="width:auto;"
+              onchange="toggleProfilePassword()"
+            >
+            입력한 비밀번호 보기
+          </label>
+        </div>
+
+        <p id="profileMessage" class="danger-text small"></p>
+
+        <button class="btn btn-primary btn-full" type="submit">
+          내 정보 저장하고 시작하기
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================================================
        기록 작성·수정 모달
-       ========================= -->
+       ================================================== -->
   <div id="recordModal" class="modal-backdrop hidden">
     <div class="modal">
       <div class="modal-header">
-        <h2 id="recordModalTitle">새 기록 추가</h2>
+        <div>
+          <h2 id="recordModalTitle">새 기록 추가</h2>
+
+          <p class="muted small">
+            새 기록은 기존 기록을 지우지 않고 계속 누적됩니다.
+          </p>
+        </div>
+
         <button
           class="close-button"
           type="button"
@@ -986,6 +1189,7 @@
         <div class="form-grid">
           <div>
             <label for="recordTitle">기록 제목</label>
+
             <input
               id="recordTitle"
               type="text"
@@ -996,16 +1200,23 @@
 
           <div>
             <label for="recordDate">기록 날짜</label>
-            <input id="recordDate" type="date" required>
+
+            <input
+              id="recordDate"
+              type="date"
+              required
+            >
           </div>
 
           <div>
             <label for="recordWeek">활동 주차</label>
+
             <select id="recordWeek"></select>
           </div>
 
           <div>
             <label for="recordInterest">관심도</label>
+
             <select id="recordInterest">
               <option value="1">⭐</option>
               <option value="2">⭐⭐</option>
@@ -1017,40 +1228,45 @@
 
           <div class="wide">
             <label for="recordInfo">탐색하거나 활동한 내용</label>
+
             <textarea
               id="recordInfo"
-              placeholder="하는 일, 학과 특징, 학교 정보, 체험 내용 등을 기록하세요."
+              placeholder="하는 일, 학과 특징, 학교 정보, 진로 체험 내용 등을 기록하세요."
               required
             ></textarea>
           </div>
 
           <div class="wide">
             <label for="recordLearning">새롭게 알게 된 점</label>
+
             <textarea
               id="recordLearning"
-              placeholder="이번 탐색을 통해 무엇을 새롭게 알게 되었나요?"
+              placeholder="이번 탐색이나 활동을 통해 새롭게 알게 된 내용을 적어 보세요."
             ></textarea>
           </div>
 
           <div class="wide">
             <label for="recordReflection">나의 생각과 진로 연결</label>
+
             <textarea
               id="recordReflection"
-              placeholder="나와 잘 맞는 점, 관심이 생긴 이유, 더 알아볼 점을 써 보세요."
+              placeholder="나와 잘 맞는 점, 관심이 생긴 이유, 나의 꿈과 연결되는 점을 적어 보세요."
             ></textarea>
           </div>
 
           <div class="wide">
-            <label for="recordNext">다음에 실천하거나 찾아볼 일</label>
+            <label for="recordNext">다음 계획</label>
+
             <textarea
               id="recordNext"
-              placeholder="다음 탐색 계획이나 실천할 일을 적어 보세요."
+              placeholder="다음에 더 찾아볼 내용이나 실천할 일을 적어 보세요."
             ></textarea>
           </div>
         </div>
 
         <div
-          style="display:flex; gap:10px; justify-content:flex-end; margin-top:18px;"
+          class="button-row"
+          style="justify-content:flex-end; margin-top:18px;"
         >
           <button
             class="btn btn-light"
@@ -1059,6 +1275,7 @@
           >
             취소
           </button>
+
           <button class="btn btn-primary" type="submit">
             기록 저장
           </button>
@@ -1067,13 +1284,14 @@
     </div>
   </div>
 
+  <!-- 화면 아래 알림 -->
   <div id="toast" class="toast hidden"></div>
 
   <script>
-    /* =====================================================
-       1. 앱에서 사용하는 기본 상수
-       ===================================================== */
-    const STORAGE_KEY = "careerPortfolioSingleFileV1";
+    /* ==================================================
+       1. 기본 설정
+       ================================================== */
+    const STORAGE_KEY = "careerPortfolioCompleteV2";
 
     const CATEGORY_INFO = {
       job: {
@@ -1103,11 +1321,12 @@
     let loginRole = "student";
     let currentView = "dashboard";
     let teacherSelectedStudentId = "1-1-01";
+    let teacherSelectedClass = 1;
+    let teacherShowPasswords = false;
 
-    /* =====================================================
-       2. 최초 데이터 생성
-       - 5개 학급, 학급당 25명의 학생 계정을 자동 생성합니다.
-       ===================================================== */
+    /* ==================================================
+       2. 학생 125명 계정 만들기
+       ================================================== */
     function createInitialState() {
       const students = [];
 
@@ -1117,61 +1336,17 @@
           const id = `1-${classNumber}-${paddedNumber}`;
 
           students.push({
-            id,
+            id: id,
             password: "1234",
-            name: `1학년 ${classNumber}반 ${number}번`,
-            classNumber,
-            number,
+            realName: "",
+            nickname: "",
+            firstLogin: true,
+            classNumber: classNumber,
+            number: number,
             records: []
           });
         }
       }
-
-      /* 첫 번째 학생에게 화면 확인용 예시 기록을 제공합니다. */
-      const sampleStudent = students.find(student => student.id === "1-1-01");
-
-      sampleStudent.name = "김하늘";
-      sampleStudent.records = [
-        {
-          id: makeId(),
-          category: "job",
-          title: "웹 개발자",
-          date: "2026-03-12",
-          week: 2,
-          interest: 4,
-          info: "웹사이트와 웹 서비스를 기획하고 프로그램을 만드는 직업이다.",
-          learning: "화면 디자인뿐 아니라 데이터와 서버에 대한 이해도 필요하다.",
-          reflection: "문제를 해결하고 결과물을 만드는 활동이 나와 잘 맞을 것 같다.",
-          next: "간단한 HTML 페이지를 직접 만들어 본다.",
-          feedback: "관심을 가진 이유가 잘 드러납니다. 필요한 역량도 더 찾아보세요."
-        },
-        {
-          id: makeId(),
-          category: "major",
-          title: "컴퓨터공학과",
-          date: "2026-03-26",
-          week: 4,
-          interest: 4,
-          info: "컴퓨터 시스템, 프로그래밍, 인공지능, 네트워크 등을 공부한다.",
-          learning: "수학적 사고력과 문제 해결 능력이 중요하다는 것을 알았다.",
-          reflection: "프로그램을 만드는 것에 관심이 있어 더 탐색하고 싶다.",
-          next: "관련 대학의 교육과정을 비교해 본다.",
-          feedback: ""
-        },
-        {
-          id: makeId(),
-          category: "activity",
-          title: "진로 흥미 검사",
-          date: "2026-04-09",
-          week: 6,
-          interest: 3,
-          info: "진로 흥미 검사를 실시하고 결과를 분석했다.",
-          learning: "탐구형과 예술형 분야에 관심이 높게 나타났다.",
-          reflection: "좋아하는 것과 잘하는 것을 함께 생각해야 한다.",
-          next: "탐구형과 관련된 직업을 세 가지 더 찾아본다.",
-          feedback: "검사 결과를 직업 탐색과 연결해 보세요."
-        }
-      ];
 
       return {
         teacher: {
@@ -1179,40 +1354,45 @@
           password: "teacher1234",
           name: "진로 담당 교사"
         },
-        students
+        students: students
       };
     }
 
-    /* =====================================================
-       3. 브라우저 저장소 관리
-       ===================================================== */
     function loadState() {
-      const saved = localStorage.getItem(STORAGE_KEY);
+      const savedData = localStorage.getItem(STORAGE_KEY);
 
-      if (saved) {
+      if (savedData) {
         try {
-          return JSON.parse(saved);
+          return JSON.parse(savedData);
         } catch (error) {
-          console.error("저장 데이터를 읽는 데 실패했습니다.", error);
+          console.error("저장된 자료를 불러오지 못했습니다.", error);
         }
       }
 
       const initialState = createInitialState();
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(initialState));
+
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify(initialState)
+      );
+
       return initialState;
     }
 
     function saveState() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify(state)
+      );
     }
 
     function makeId() {
       return `${Date.now()}-${Math.random().toString(16).slice(2)}`;
     }
 
-    /* =====================================================
-       4. 로그인 관련 기능
-       ===================================================== */
+    /* ==================================================
+       3. 로그인
+       ================================================== */
     function setLoginRole(role) {
       loginRole = role;
 
@@ -1225,14 +1405,20 @@
         .classList.toggle("active", role === "teacher");
 
       document.getElementById("loginId").placeholder =
-        role === "student" ? "예: 1-1-01" : "교사 아이디";
+        role === "student"
+          ? "예: 1-1-01"
+          : "교사 아이디";
 
       document.getElementById("loginMessage").textContent = "";
     }
 
-    function togglePassword() {
+    function toggleLoginPassword() {
       const input = document.getElementById("loginPassword");
-      input.type = input.type === "password" ? "text" : "password";
+
+      input.type =
+        input.type === "password"
+          ? "text"
+          : "password";
     }
 
     function login(event) {
@@ -1242,18 +1428,22 @@
       const password = document.getElementById("loginPassword").value;
       const message = document.getElementById("loginMessage");
 
+      message.textContent = "";
+
       if (loginRole === "student") {
-        const student = state.students.find(item => item.id === id);
+        const student = state.students.find(
+          item => item.id === id
+        );
 
         if (!student || student.password !== password) {
           message.textContent =
-            "아이디 또는 비밀번호가 맞지 않습니다. 선생님께 초기화를 요청하세요.";
+            "아이디 또는 비밀번호가 맞지 않습니다. 선생님께 확인해 주세요.";
           return;
         }
 
         currentUser = {
           role: "student",
-          ...student
+          id: student.id
         };
 
         currentView = "dashboard";
@@ -1262,33 +1452,65 @@
           id !== state.teacher.id ||
           password !== state.teacher.password
         ) {
-          message.textContent = "교사 아이디 또는 비밀번호가 맞지 않습니다.";
+          message.textContent =
+            "교사 아이디 또는 비밀번호가 맞지 않습니다.";
           return;
         }
 
         currentUser = {
           role: "teacher",
-          ...state.teacher
+          id: state.teacher.id,
+          name: state.teacher.name
         };
 
         currentView = "teacher";
       }
 
-      document.getElementById("loginScreen").classList.add("hidden");
-      document.getElementById("appScreen").classList.remove("hidden");
+      document
+        .getElementById("loginScreen")
+        .classList.add("hidden");
+
+      document
+        .getElementById("appScreen")
+        .classList.remove("hidden");
 
       configureAppForUser();
       renderCurrentView();
+
+      if (currentUser.role === "student") {
+        const student = getCurrentStudent();
+
+        if (
+          student.firstLogin ||
+          !student.realName ||
+          !student.nickname
+        ) {
+          setTimeout(function () {
+            openProfileModal(true);
+          }, 100);
+        }
+      }
     }
 
     function logout() {
       currentUser = null;
-      document.getElementById("appScreen").classList.add("hidden");
-      document.getElementById("loginScreen").classList.remove("hidden");
+      currentView = "dashboard";
+
+      document
+        .getElementById("appScreen")
+        .classList.add("hidden");
+
+      document
+        .getElementById("loginScreen")
+        .classList.remove("hidden");
+
       document.getElementById("loginForm").reset();
       document.getElementById("loginMessage").textContent = "";
     }
 
+    /* ==================================================
+       4. 사용자별 화면 설정
+       ================================================== */
     function configureAppForUser() {
       const isStudent = currentUser.role === "student";
 
@@ -1300,36 +1522,221 @@
         .getElementById("teacherNavigation")
         .classList.toggle("hidden", isStudent);
 
-      document.getElementById("userName").textContent = currentUser.name;
-      document.getElementById("userRoleText").textContent =
-        isStudent ? `${currentUser.id} · 학생` : "교사 관리자";
+      if (isStudent) {
+        const student = getCurrentStudent();
 
-      document.getElementById("userAvatar").textContent =
-        isStudent ? currentUser.name.charAt(0) : "교";
+        document.getElementById("userName").textContent =
+          student.nickname ||
+          student.realName ||
+          `${student.number}번 학생`;
+
+        document.getElementById("userRoleText").textContent =
+          student.realName
+            ? `${student.id} · ${student.realName}`
+            : `${student.id} · 최초 설정 필요`;
+
+        document.getElementById("userAvatar").textContent =
+          (student.realName || "학").charAt(0);
+      } else {
+        document.getElementById("userName").textContent =
+          state.teacher.name;
+
+        document.getElementById("userRoleText").textContent =
+          "교사 관리자";
+
+        document.getElementById("userAvatar").textContent = "교";
+      }
 
       bindNavigation();
     }
 
     function bindNavigation() {
-      document.querySelectorAll(".nav-button[data-view]").forEach(button => {
-        button.onclick = () => {
-          currentView = button.dataset.view;
+      document
+        .querySelectorAll(".nav-button[data-view]")
+        .forEach(function (button) {
+          button.onclick = function () {
+            currentView = button.dataset.view;
 
-          document
-            .querySelectorAll(".nav-button[data-view]")
-            .forEach(item => item.classList.remove("active"));
+            document
+              .querySelectorAll(".nav-button[data-view]")
+              .forEach(function (item) {
+                item.classList.remove("active");
+              });
 
-          button.classList.add("active");
-          renderCurrentView();
-        };
-      });
+            button.classList.add("active");
+            renderCurrentView();
+          };
+        });
     }
 
-    /* =====================================================
-       5. 화면 전환
-       ===================================================== */
+    function getCurrentStudent() {
+      return state.students.find(
+        student => student.id === currentUser.id
+      );
+    }
+
+    function setPageHeader(title, subtitle) {
+      document.getElementById("pageTitle").textContent = title;
+      document.getElementById("pageSubtitle").textContent = subtitle;
+    }
+
+    /* ==================================================
+       5. 학생 최초 로그인 및 정보 수정
+       ================================================== */
+    function openProfileModal(isFirstLogin) {
+      if (!currentUser || currentUser.role !== "student") {
+        return;
+      }
+
+      const student = getCurrentStudent();
+      const modal = document.getElementById("profileModal");
+
+      document.getElementById("profileModalTitle").textContent =
+        isFirstLogin
+          ? "처음 로그인 설정"
+          : "내 정보 수정";
+
+      document.getElementById("profileModalDescription").textContent =
+        isFirstLogin
+          ? "본명, 진로 별명, 새 비밀번호를 등록해야 포트폴리오를 시작할 수 있습니다."
+          : "아이디는 그대로 유지되며 본명, 진로 별명, 비밀번호를 수정할 수 있습니다.";
+
+      document.getElementById("profileId").value =
+        student.id;
+
+      document.getElementById("profileRealName").value =
+        student.realName || "";
+
+      document.getElementById("profileNickname").value =
+        student.nickname || "";
+
+      document.getElementById("profilePassword").value = "";
+      document.getElementById("profilePasswordConfirm").value = "";
+      document.getElementById("profileMessage").textContent = "";
+
+      document
+        .getElementById("profileCloseButton")
+        .classList.toggle("hidden", isFirstLogin);
+
+      modal.dataset.firstLogin =
+        isFirstLogin ? "true" : "false";
+
+      modal.classList.remove("hidden");
+
+      setTimeout(function () {
+        document.getElementById("profileRealName").focus();
+      }, 100);
+    }
+
+    function closeProfileModal() {
+      const modal = document.getElementById("profileModal");
+      const isFirstLogin =
+        modal.dataset.firstLogin === "true";
+
+      if (isFirstLogin) {
+        showToast(
+          "본명, 진로 별명, 새 비밀번호를 먼저 등록해 주세요."
+        );
+        return;
+      }
+
+      modal.classList.add("hidden");
+    }
+
+    function toggleProfilePassword() {
+      const password =
+        document.getElementById("profilePassword");
+
+      const confirmPassword =
+        document.getElementById("profilePasswordConfirm");
+
+      const newType =
+        password.type === "password"
+          ? "text"
+          : "password";
+
+      password.type = newType;
+      confirmPassword.type = newType;
+    }
+
+    function saveStudentProfile(event) {
+      event.preventDefault();
+
+      const student = getCurrentStudent();
+
+      const realName =
+        document.getElementById("profileRealName").value.trim();
+
+      const nickname =
+        document.getElementById("profileNickname").value.trim();
+
+      const password =
+        document.getElementById("profilePassword").value;
+
+      const confirmPassword =
+        document.getElementById("profilePasswordConfirm").value;
+
+      const message =
+        document.getElementById("profileMessage");
+
+      const namePattern = /^[가-힣a-zA-Z\s]{2,20}$/;
+
+      message.textContent = "";
+
+      if (!namePattern.test(realName)) {
+        message.textContent =
+          "본명은 한글 또는 영문으로 2자 이상 입력해 주세요.";
+        return;
+      }
+
+      if (nickname.length < 2) {
+        message.textContent =
+          "자신의 꿈이나 관심 직업을 담은 별명을 입력해 주세요.";
+        return;
+      }
+
+      if (password.length < 4) {
+        message.textContent =
+          "비밀번호는 4자 이상 입력해 주세요.";
+        return;
+      }
+
+      if (password === "1234") {
+        message.textContent =
+          "임시 비밀번호 1234가 아닌 새 비밀번호를 입력해 주세요.";
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        message.textContent =
+          "새 비밀번호와 비밀번호 확인이 서로 다릅니다.";
+        return;
+      }
+
+      student.realName = realName;
+      student.nickname = nickname;
+      student.password = password;
+      student.firstLogin = false;
+
+      saveState();
+
+      document
+        .getElementById("profileModal")
+        .classList.add("hidden");
+
+      configureAppForUser();
+      renderCurrentView();
+
+      showToast("본명, 진로 별명, 비밀번호가 저장되었습니다.");
+    }
+
+    /* ==================================================
+       6. 화면 렌더링
+       ================================================== */
     function renderCurrentView() {
-      if (!currentUser) return;
+      if (!currentUser) {
+        return;
+      }
 
       if (currentUser.role === "student") {
         const student = getCurrentStudent();
@@ -1352,55 +1759,61 @@
       }
     }
 
-    function setPageHeader(title, subtitle) {
-      document.getElementById("pageTitle").textContent = title;
-      document.getElementById("pageSubtitle").textContent = subtitle;
-    }
-
-    function getCurrentStudent() {
-      return state.students.find(student => student.id === currentUser.id);
-    }
-
     function countByCategory(student, category) {
-      return student.records.filter(record => record.category === category).length;
+      return student.records.filter(
+        record => record.category === category
+      ).length;
     }
 
-    /* =====================================================
-       6. 학생 대시보드
-       ===================================================== */
+    function statCard(label, number, colorClass) {
+      return `
+        <div class="stat-card ${colorClass}">
+          <div class="muted small">${escapeHtml(label)}</div>
+          <div class="number">${number}</div>
+        </div>
+      `;
+    }
+
+    /* ==================================================
+       7. 학생 홈
+       ================================================== */
     function renderStudentDashboard(student) {
+      const displayName =
+        student.nickname ||
+        student.realName ||
+        `${student.number}번 학생`;
+
       setPageHeader(
-        `${student.name}님의 진로 포트폴리오`,
-        "17주 동안 쌓이는 나의 진로 성장 기록입니다."
+        `${displayName}님의 진로 포트폴리오`,
+        "17주 동안 탐색한 직업, 학과, 학교와 활동이 계속 누적됩니다."
       );
 
-      const counts = {
-        job: countByCategory(student, "job"),
-        major: countByCategory(student, "major"),
-        school:
-          countByCategory(student, "highschool") +
-          countByCategory(student, "university"),
-        activity: countByCategory(student, "activity")
-      };
+      const schoolCount =
+        countByCategory(student, "highschool") +
+        countByCategory(student, "university");
 
       const latestRecords = [...student.records]
-        .sort((a, b) => b.date.localeCompare(a.date))
+        .sort(function (a, b) {
+          return b.date.localeCompare(a.date);
+        })
         .slice(0, 3);
 
       document.getElementById("viewContainer").innerHTML = `
         <div class="stats-grid">
-          ${statCard("전체 기록", student.records.length, "total")}
-          ${statCard("직업", counts.job, "job")}
-          ${statCard("학과", counts.major, "major")}
-          ${statCard("학교", counts.school, "school")}
-          ${statCard("체험·활동", counts.activity, "activity")}
+          ${statCard("전체 기록", student.records.length, "")}
+          ${statCard("직업", countByCategory(student, "job"), "blue")}
+          ${statCard("학과", countByCategory(student, "major"), "teal")}
+          ${statCard("학교", schoolCount, "yellow")}
+          ${statCard("체험·활동", countByCategory(student, "activity"), "purple")}
         </div>
 
         <div class="card" style="margin-bottom:18px;">
           <h3>🗓️ 17주 성장 과정</h3>
+
           <p class="muted small">
-            기록이 있는 주차는 초록색으로 표시됩니다.
+            기록을 작성한 주차는 초록색으로 표시됩니다.
           </p>
+
           <div class="week-track">
             ${renderWeekTrack(student)}
           </div>
@@ -1410,6 +1823,7 @@
           <div class="card">
             <div class="section-header">
               <h3>최근 누적 기록</h3>
+
               <button
                 class="btn btn-light"
                 type="button"
@@ -1422,7 +1836,7 @@
             <div class="record-list">
               ${
                 latestRecords.length
-                  ? latestRecords.map(record => compactRecord(record)).join("")
+                  ? latestRecords.map(compactRecord).join("")
                   : emptyState("아직 작성한 기록이 없습니다.")
               }
             </div>
@@ -1430,74 +1844,87 @@
 
           <div class="card">
             <h3>✍️ 새 기록 추가</h3>
+
             <p class="muted small">
-              기존 기록은 사라지지 않고 계속 누적됩니다.
+              새 기록은 기존 기록을 지우지 않고 계속 누적됩니다.
             </p>
 
             <div class="category-actions">
-              ${Object.entries(CATEGORY_INFO).map(([key, info]) => `
-                <button
-                  class="category-action"
-                  type="button"
-                  onclick="openRecordModal('${key}')"
-                >
-                  ${info.icon}<br>${info.name}
-                </button>
-              `).join("")}
+              ${
+                Object.entries(CATEGORY_INFO)
+                  .map(function (entry) {
+                    const key = entry[0];
+                    const info = entry[1];
+
+                    return `
+                      <button
+                        class="category-action"
+                        type="button"
+                        onclick="openRecordModal('${key}')"
+                      >
+                        ${info.icon}<br>
+                        ${info.name}
+                      </button>
+                    `;
+                  })
+                  .join("")
+              }
             </div>
           </div>
         </div>
       `;
     }
 
-    function statCard(label, number, className) {
-      return `
-        <div class="stat-card ${className}">
-          <div class="muted small">${escapeHtml(label)}</div>
-          <div class="number">${number}</div>
-        </div>
-      `;
-    }
-
     function renderWeekTrack(student) {
       const completedWeeks = new Set(
-        student.records.map(record => Number(record.week))
+        student.records.map(function (record) {
+          return Number(record.week);
+        })
       );
 
-      return Array.from({ length: 17 }, (_, index) => {
-        const week = index + 1;
-        const className = completedWeeks.has(week) ? "done" : "";
+      return Array.from(
+        { length: 17 },
+        function (_, index) {
+          const week = index + 1;
+          const className =
+            completedWeeks.has(week) ? "done" : "";
 
-        return `
-          <div class="week ${className}" title="${week}주차">
-            ${week}주
-          </div>
-        `;
-      }).join("");
+          return `
+            <div class="week ${className}">
+              ${week}주
+            </div>
+          `;
+        }
+      ).join("");
     }
 
-    /* =====================================================
-       7. 파트별 누적 기록 화면
-       ===================================================== */
+    /* ==================================================
+       8. 파트별 누적 기록
+       ================================================== */
     function renderCategoryPage(student, category) {
       const info = CATEGORY_INFO[category];
 
+      const records = student.records
+        .filter(function (record) {
+          return record.category === category;
+        })
+        .sort(function (a, b) {
+          return b.date.localeCompare(a.date);
+        });
+
       setPageHeader(
         `${info.icon} ${info.name}`,
-        "기존 자료를 덮어쓰지 않고 새로운 탐색 기록을 계속 추가합니다."
+        "새로운 탐색 결과를 계속 추가하고 이전 기록과 비교할 수 있습니다."
       );
-
-      const records = student.records
-        .filter(record => record.category === category)
-        .sort((a, b) => b.date.localeCompare(a.date));
 
       document.getElementById("viewContainer").innerHTML = `
         <div class="card">
           <div class="section-header">
             <div>
               <h2>${info.name} 누적 기록</h2>
+
               <p class="muted small">
-                현재까지 총 <strong>${records.length}개</strong>의 기록이 쌓였습니다.
+                지금까지 총 <strong>${records.length}개</strong>의 기록이 쌓였습니다.
               </p>
             </div>
 
@@ -1513,8 +1940,10 @@
           <div class="record-list">
             ${
               records.length
-                ? records.map(record => fullRecordCard(record, true)).join("")
-                : emptyState(`${info.name} 기록을 처음으로 작성해 보세요.`)
+                ? records.map(function (record) {
+                    return fullRecordCard(record, true);
+                  }).join("")
+                : emptyState(`${info.name} 기록을 처음 작성해 보세요.`)
             }
           </div>
         </div>
@@ -1525,51 +1954,86 @@
       const info = CATEGORY_INFO[record.category];
 
       return `
-        <div class="record-card" data-category="${record.category}">
+        <article
+          class="record-card"
+          data-category="${record.category}"
+        >
           <div class="record-meta">
-            <span class="badge">${info.icon} ${info.name}</span>
+            <span class="badge">
+              ${info.icon} ${info.name}
+            </span>
+
             <span class="badge">${record.week}주차</span>
             <span class="badge">${escapeHtml(record.date)}</span>
           </div>
+
           <h3>${escapeHtml(record.title)}</h3>
-          <p class="muted">${escapeHtml(shorten(record.reflection || record.info, 90))}</p>
-        </div>
+
+          <p class="muted">
+            ${escapeHtml(shorten(record.reflection || record.info, 100))}
+          </p>
+        </article>
       `;
     }
 
-    function fullRecordCard(record, showActions = false) {
+    function fullRecordCard(record, showActions) {
       const info = CATEGORY_INFO[record.category];
 
       return `
-        <article class="record-card" data-category="${record.category}">
+        <article
+          class="record-card"
+          data-category="${record.category}"
+        >
           <div class="record-meta">
-            <span class="badge">${info.icon} ${info.name}</span>
+            <span class="badge">
+              ${info.icon} ${info.name}
+            </span>
+
             <span class="badge">${record.week}주차</span>
             <span class="badge">${escapeHtml(record.date)}</span>
-            <span class="badge">${"⭐".repeat(Number(record.interest || 0))}</span>
+
+            <span class="badge">
+              ${"⭐".repeat(Number(record.interest || 0))}
+            </span>
           </div>
 
           <h3>${escapeHtml(record.title)}</h3>
 
-          <p><strong>탐색·활동 내용</strong><br>
+          <p>
+            <strong>탐색·활동 내용</strong><br>
             ${formatText(record.info)}
           </p>
 
           ${
             record.learning
-              ? `<p><strong>새롭게 알게 된 점</strong><br>${formatText(record.learning)}</p>`
+              ? `
+                <p>
+                  <strong>새롭게 알게 된 점</strong><br>
+                  ${formatText(record.learning)}
+                </p>
+              `
               : ""
           }
 
           ${
             record.reflection
-              ? `<p><strong>나의 생각과 진로 연결</strong><br>${formatText(record.reflection)}</p>`
+              ? `
+                <p>
+                  <strong>나의 생각과 진로 연결</strong><br>
+                  ${formatText(record.reflection)}
+                </p>
+              `
               : ""
           }
 
           ${
             record.next
-              ? `<p><strong>다음 계획</strong><br>${formatText(record.next)}</p>`
+              ? `
+                <p>
+                  <strong>다음 계획</strong><br>
+                  ${formatText(record.next)}
+                </p>
+              `
               : ""
           }
 
@@ -1595,6 +2059,7 @@
                   >
                     수정
                   </button>
+
                   <button
                     class="btn btn-danger"
                     type="button"
@@ -1610,88 +2075,104 @@
       `;
     }
 
-    /* =====================================================
-       8. 성장 한눈에 보기
-       ===================================================== */
+    /* ==================================================
+       9. 성장 한눈에 보기
+       ================================================== */
     function renderOverview(student) {
-      setPageHeader(
-        "📊 성장 한눈에 보기",
-        "파트별 누적 현황과 나의 진로 탐색 흐름을 확인합니다."
-      );
-
-      const categoryCounts = Object.keys(CATEGORY_INFO).map(key => ({
-        key,
-        name: CATEGORY_INFO[key].name,
-        count: countByCategory(student, key)
-      }));
+      const categoryCounts = Object.keys(CATEGORY_INFO)
+        .map(function (key) {
+          return {
+            key: key,
+            name: CATEGORY_INFO[key].name,
+            count: countByCategory(student, key)
+          };
+        });
 
       const maxCount = Math.max(
         1,
-        ...categoryCounts.map(item => item.count)
+        ...categoryCounts.map(function (item) {
+          return item.count;
+        })
       );
 
-      const mostExplored = [...categoryCounts]
-        .sort((a, b) => b.count - a.count)[0];
-
       const latestRecords = [...student.records]
-        .sort((a, b) => b.date.localeCompare(a.date))
+        .sort(function (a, b) {
+          return b.date.localeCompare(a.date);
+        })
         .slice(0, 8);
+
+      setPageHeader(
+        "📊 성장 한눈에 보기",
+        "파트별 누적 현황과 나의 진로 탐색 흐름을 한 화면에서 확인합니다."
+      );
 
       document.getElementById("viewContainer").innerHTML = `
         <div class="stats-grid">
-          ${statCard("총 누적 기록", student.records.length, "total")}
-          ${statCard("기록한 주차", new Set(student.records.map(r => r.week)).size, "job")}
-          ${statCard("직업 탐색", countByCategory(student, "job"), "major")}
-          ${statCard("학교 탐색", countByCategory(student, "highschool") + countByCategory(student, "university"), "school")}
-          ${statCard("체험 활동", countByCategory(student, "activity"), "activity")}
+          ${statCard("총 누적 기록", student.records.length, "")}
+          ${statCard(
+            "기록한 주차",
+            new Set(student.records.map(function (record) {
+              return record.week;
+            })).size,
+            "blue"
+          )}
+          ${statCard("직업 탐색", countByCategory(student, "job"), "teal")}
+          ${statCard(
+            "학교 탐색",
+            countByCategory(student, "highschool") +
+            countByCategory(student, "university"),
+            "yellow"
+          )}
+          ${statCard("체험 활동", countByCategory(student, "activity"), "purple")}
         </div>
 
         <div class="overview-grid">
           <div class="card">
             <h3>파트별 누적 기록</h3>
 
-            ${categoryCounts.map(item => {
-              const percent = Math.round((item.count / maxCount) * 100);
+            ${
+              categoryCounts.map(function (item) {
+                const percent = Math.round(
+                  item.count / maxCount * 100
+                );
 
-              return `
-                <div class="bar-row">
-                  <span>${escapeHtml(item.name)}</span>
-                  <div class="bar-track">
-                    <div
-                      class="bar-fill"
-                      style="width:${percent}%;"
-                    ></div>
+                return `
+                  <div class="bar-row">
+                    <span>${escapeHtml(item.name)}</span>
+
+                    <div class="bar-track">
+                      <div
+                        class="bar-fill"
+                        style="width:${percent}%;"
+                      ></div>
+                    </div>
+
+                    <strong>${item.count}</strong>
                   </div>
-                  <strong>${item.count}</strong>
-                </div>
-              `;
-            }).join("")}
+                `;
+              }).join("")
+            }
           </div>
 
           <div class="card">
-            <h3>나의 진로 탐색 특징</h3>
+            <h3>나의 진로 성장 정보</h3>
 
             <div class="insight">
-              <strong>가장 많이 탐색한 영역</strong>
+              <strong>나의 진로 별명</strong>
+
               <p>
-                ${
-                  student.records.length
-                    ? `${CATEGORY_INFO[mostExplored.key].icon} ${mostExplored.name}`
-                    : "아직 분석할 기록이 없습니다."
-                }
+                ${escapeHtml(student.nickname || "아직 등록하지 않았습니다.")}
               </p>
 
               <strong>성장 제안</strong>
+
               <p class="muted">
-                ${
-                  student.records.length
-                    ? "기록이 적은 영역도 탐색하면 직업·학과·학교·활동의 연결 관계를 더 잘 이해할 수 있습니다."
-                    : "첫 번째 진로 탐색 기록을 작성해 보세요."
-                }
+                직업, 학과, 고등학교, 대학교, 체험 활동을 서로 연결해서
+                기록하면 나의 진로 방향을 더 구체적으로 발견할 수 있습니다.
               </p>
             </div>
 
-            <div class="screen-actions" style="margin-top:14px;">
+            <div class="button-row" style="margin-top:14px;">
               <button
                 class="btn btn-light"
                 type="button"
@@ -1699,6 +2180,7 @@
               >
                 포트폴리오 인쇄
               </button>
+
               <button
                 class="btn btn-teal"
                 type="button"
@@ -1711,23 +2193,38 @@
 
           <div class="card" style="grid-column:1 / -1;">
             <h3>나의 최근 진로 여정</h3>
+
             <div class="timeline">
               ${
                 latestRecords.length
-                  ? latestRecords.map(record => `
-                    <div class="timeline-item">
-                      <strong>
-                        ${CATEGORY_INFO[record.category].icon}
-                        ${escapeHtml(record.title)}
-                      </strong>
-                      <div class="small muted">
-                        ${record.week}주차 · ${escapeHtml(record.date)}
-                        · ${CATEGORY_INFO[record.category].name}
-                      </div>
-                      <p>${escapeHtml(shorten(record.reflection || record.info, 120))}</p>
-                    </div>
-                  `).join("")
-                  : emptyState("기록이 쌓이면 진로 여정이 시간순으로 나타납니다.")
+                  ? latestRecords.map(function (record) {
+                      return `
+                        <div class="timeline-item">
+                          <strong>
+                            ${CATEGORY_INFO[record.category].icon}
+                            ${escapeHtml(record.title)}
+                          </strong>
+
+                          <div class="small muted">
+                            ${record.week}주차 ·
+                            ${escapeHtml(record.date)} ·
+                            ${CATEGORY_INFO[record.category].name}
+                          </div>
+
+                          <p>
+                            ${escapeHtml(
+                              shorten(
+                                record.reflection || record.info,
+                                130
+                              )
+                            )}
+                          </p>
+                        </div>
+                      `;
+                    }).join("")
+                  : emptyState(
+                      "기록이 쌓이면 진로 여정이 시간순으로 나타납니다."
+                    )
               }
             </div>
           </div>
@@ -1735,32 +2232,38 @@
       `;
     }
 
-    /* =====================================================
-       9. 전체 통합 포트폴리오
-       ===================================================== */
+    /* ==================================================
+       10. 전체 통합 포트폴리오
+       ================================================== */
     function renderTimeline(student) {
-      setPageHeader(
-        "🗂️ 전체 포트폴리오",
-        "직업·학과·학교·체험 기록을 시간순으로 한눈에 확인합니다."
-      );
-
       const records = [...student.records]
-        .sort((a, b) => {
-          if (a.week !== b.week) return b.week - a.week;
+        .sort(function (a, b) {
+          if (a.week !== b.week) {
+            return b.week - a.week;
+          }
+
           return b.date.localeCompare(a.date);
         });
+
+      setPageHeader(
+        "🗂️ 전체 포트폴리오",
+        "직업, 학과, 학교, 활동 기록을 한 페이지에서 확인합니다."
+      );
 
       document.getElementById("viewContainer").innerHTML = `
         <div class="card">
           <div class="section-header">
             <div>
-              <h2>나의 진로 여정</h2>
+              <h2>
+                ${escapeHtml(student.nickname || student.realName)}의 진로 여정
+              </h2>
+
               <p class="muted small">
                 총 ${records.length}개의 누적 기록
               </p>
             </div>
 
-            <div class="screen-actions">
+            <div class="button-row">
               <button
                 class="btn btn-light"
                 type="button"
@@ -1768,6 +2271,7 @@
               >
                 인쇄
               </button>
+
               <button
                 class="btn btn-primary"
                 type="button"
@@ -1781,7 +2285,9 @@
           <div class="record-list">
             ${
               records.length
-                ? records.map(record => fullRecordCard(record, true)).join("")
+                ? records.map(function (record) {
+                    return fullRecordCard(record, true);
+                  }).join("")
                 : emptyState("아직 포트폴리오 기록이 없습니다.")
             }
           </div>
@@ -1789,19 +2295,27 @@
       `;
     }
 
-    /* =====================================================
-       10. 기록 추가·수정·삭제
-       ===================================================== */
+    /* ==================================================
+       11. 기록 작성·수정·삭제
+       ================================================== */
     function populateWeekOptions() {
       const select = document.getElementById("recordWeek");
 
-      select.innerHTML = Array.from({ length: 17 }, (_, index) => {
-        const week = index + 1;
-        return `<option value="${week}">${week}주차</option>`;
-      }).join("");
+      select.innerHTML = Array.from(
+        { length: 17 },
+        function (_, index) {
+          const week = index + 1;
+
+          return `
+            <option value="${week}">
+              ${week}주차
+            </option>
+          `;
+        }
+      ).join("");
     }
 
-    function openRecordModal(category, record = null) {
+    function openRecordModal(category, record) {
       populateWeekOptions();
 
       document.getElementById("recordModalTitle").textContent =
@@ -1809,26 +2323,48 @@
           ? `${CATEGORY_INFO[category].name} 기록 수정`
           : `${CATEGORY_INFO[category].name} 새 기록`;
 
-      document.getElementById("recordId").value = record?.id || "";
-      document.getElementById("recordCategory").value = category;
-      document.getElementById("recordTitle").value = record?.title || "";
-      document.getElementById("recordDate").value =
-        record?.date || new Date().toISOString().slice(0, 10);
-      document.getElementById("recordWeek").value = record?.week || 1;
-      document.getElementById("recordInterest").value =
-        record?.interest || 3;
-      document.getElementById("recordInfo").value = record?.info || "";
-      document.getElementById("recordLearning").value =
-        record?.learning || "";
-      document.getElementById("recordReflection").value =
-        record?.reflection || "";
-      document.getElementById("recordNext").value = record?.next || "";
+      document.getElementById("recordId").value =
+        record ? record.id : "";
 
-      document.getElementById("recordModal").classList.remove("hidden");
+      document.getElementById("recordCategory").value =
+        category;
+
+      document.getElementById("recordTitle").value =
+        record ? record.title : "";
+
+      document.getElementById("recordDate").value =
+        record
+          ? record.date
+          : new Date().toISOString().slice(0, 10);
+
+      document.getElementById("recordWeek").value =
+        record ? record.week : 1;
+
+      document.getElementById("recordInterest").value =
+        record ? record.interest : 3;
+
+      document.getElementById("recordInfo").value =
+        record ? record.info : "";
+
+      document.getElementById("recordLearning").value =
+        record ? record.learning : "";
+
+      document.getElementById("recordReflection").value =
+        record ? record.reflection : "";
+
+      document.getElementById("recordNext").value =
+        record ? record.next : "";
+
+      document
+        .getElementById("recordModal")
+        .classList.remove("hidden");
     }
 
     function closeRecordModal() {
-      document.getElementById("recordModal").classList.add("hidden");
+      document
+        .getElementById("recordModal")
+        .classList.add("hidden");
+
       document.getElementById("recordForm").reset();
     }
 
@@ -1836,28 +2372,43 @@
       event.preventDefault();
 
       const student = getCurrentStudent();
-      const recordId = document.getElementById("recordId").value;
+      const recordId =
+        document.getElementById("recordId").value;
 
       const newRecord = {
         id: recordId || makeId(),
-        category: document.getElementById("recordCategory").value,
-        title: document.getElementById("recordTitle").value.trim(),
-        date: document.getElementById("recordDate").value,
-        week: Number(document.getElementById("recordWeek").value),
-        interest: Number(document.getElementById("recordInterest").value),
-        info: document.getElementById("recordInfo").value.trim(),
-        learning: document.getElementById("recordLearning").value.trim(),
-        reflection: document.getElementById("recordReflection").value.trim(),
-        next: document.getElementById("recordNext").value.trim(),
+        category:
+          document.getElementById("recordCategory").value,
+        title:
+          document.getElementById("recordTitle").value.trim(),
+        date:
+          document.getElementById("recordDate").value,
+        week:
+          Number(document.getElementById("recordWeek").value),
+        interest:
+          Number(document.getElementById("recordInterest").value),
+        info:
+          document.getElementById("recordInfo").value.trim(),
+        learning:
+          document.getElementById("recordLearning").value.trim(),
+        reflection:
+          document.getElementById("recordReflection").value.trim(),
+        next:
+          document.getElementById("recordNext").value.trim(),
         feedback: ""
       };
 
       if (recordId) {
-        const index = student.records.findIndex(record => record.id === recordId);
+        const index = student.records.findIndex(
+          record => record.id === recordId
+        );
 
-        /* 기존 교사 피드백이 사라지지 않도록 보존합니다. */
-        newRecord.feedback = student.records[index].feedback || "";
-        student.records[index] = newRecord;
+        if (index !== -1) {
+          newRecord.feedback =
+            student.records[index].feedback || "";
+
+          student.records[index] = newRecord;
+        }
       } else {
         student.records.push(newRecord);
       }
@@ -1865,12 +2416,20 @@
       saveState();
       closeRecordModal();
       renderCurrentView();
-      showToast(recordId ? "기록이 수정되었습니다." : "새 기록이 누적되었습니다.");
+
+      showToast(
+        recordId
+          ? "기록이 수정되었습니다."
+          : "새 기록이 누적되었습니다."
+      );
     }
 
     function editRecord(recordId) {
       const student = getCurrentStudent();
-      const record = student.records.find(item => item.id === recordId);
+
+      const record = student.records.find(
+        item => item.id === recordId
+      );
 
       if (record) {
         openRecordModal(record.category, record);
@@ -1878,95 +2437,171 @@
     }
 
     function deleteRecord(recordId) {
-      if (!confirm("이 기록을 삭제할까요? 삭제 후에는 되돌릴 수 없습니다.")) {
+      const answer = confirm(
+        "이 기록을 삭제할까요? 삭제 후에는 되돌릴 수 없습니다."
+      );
+
+      if (!answer) {
         return;
       }
 
       const student = getCurrentStudent();
-      student.records = student.records.filter(record => record.id !== recordId);
+
+      student.records = student.records.filter(
+        record => record.id !== recordId
+      );
 
       saveState();
       renderCurrentView();
       showToast("기록이 삭제되었습니다.");
     }
 
-    /* =====================================================
-       11. 교사 관리 대시보드
-       ===================================================== */
+    /* ==================================================
+       12. 교사 학생 계정·기록 관리
+       ================================================== */
     function renderTeacherDashboard() {
-      setPageHeader(
-        "📋 교사 관리",
-        "학급별 작성 현황을 확인하고 학생 기록에 피드백할 수 있습니다."
+      const classStudents = state.students.filter(
+        student => student.classNumber === teacherSelectedClass
       );
 
-      const selectedStudent =
-        state.students.find(student => student.id === teacherSelectedStudentId) ||
-        state.students[0];
+      let selectedStudent = state.students.find(
+        student => student.id === teacherSelectedStudentId
+      );
 
-      const classNumber = selectedStudent.classNumber;
+      if (
+        !selectedStudent ||
+        selectedStudent.classNumber !== teacherSelectedClass
+      ) {
+        selectedStudent = classStudents[0];
+        teacherSelectedStudentId = selectedStudent.id;
+      }
 
-      const classStudents = state.students.filter(
-        student => student.classNumber === classNumber
+      setPageHeader(
+        "📋 학생 계정·기록 관리",
+        "학생의 본명, 진로 별명, 로그인 정보와 누적 기록을 관리합니다."
       );
 
       document.getElementById("viewContainer").innerHTML = `
         <div class="card" style="margin-bottom:18px;">
           <div class="section-header">
-            <h3>학급 선택</h3>
-            <select
-              style="width:160px;"
-              onchange="changeTeacherClass(this.value)"
-            >
-              ${[1, 2, 3, 4, 5].map(number => `
-                <option
-                  value="${number}"
-                  ${number === classNumber ? "selected" : ""}
-                >
-                  1학년 ${number}반
-                </option>
-              `).join("")}
-            </select>
+            <div>
+              <h3>학급 및 계정 관리</h3>
+
+              <p class="muted small">
+                비밀번호는 학생의 로그인 지원이 필요할 때만 확인해 주세요.
+              </p>
+            </div>
+
+            <div class="button-row">
+              <select
+                style="width:160px;"
+                onchange="changeTeacherClass(this.value)"
+              >
+                ${
+                  [1, 2, 3, 4, 5].map(function (number) {
+                    return `
+                      <option
+                        value="${number}"
+                        ${
+                          number === teacherSelectedClass
+                            ? "selected"
+                            : ""
+                        }
+                      >
+                        1학년 ${number}반
+                      </option>
+                    `;
+                  }).join("")
+                }
+              </select>
+
+              <button
+                class="btn btn-light"
+                type="button"
+                onclick="toggleTeacherPasswords()"
+              >
+                ${
+                  teacherShowPasswords
+                    ? "🔒 비밀번호 숨기기"
+                    : "👁️ 비밀번호 확인"
+                }
+              </button>
+            </div>
           </div>
         </div>
 
         <div class="teacher-layout">
           <div class="card">
-            <h3>1학년 ${classNumber}반 학생 현황</h3>
+            <h3>1학년 ${teacherSelectedClass}반 학생 계정</h3>
 
             <div class="table-wrap">
               <table>
                 <thead>
                   <tr>
                     <th>번호</th>
-                    <th>학생</th>
-                    <th>총 기록</th>
-                    <th>최근 작성</th>
+                    <th>아이디</th>
+                    <th>본명</th>
+                    <th>진로 별명</th>
+                    <th>비밀번호</th>
+                    <th>기록</th>
                     <th>관리</th>
                   </tr>
                 </thead>
-                <tbody>
-                  ${classStudents.map(student => {
-                    const latest = [...student.records]
-                      .sort((a, b) => b.date.localeCompare(a.date))[0];
 
-                    return `
-                      <tr class="${student.id === selectedStudent.id ? "selected-row" : ""}">
-                        <td>${student.number}</td>
-                        <td>${escapeHtml(student.name)}</td>
-                        <td>${student.records.length}</td>
-                        <td>${latest ? escapeHtml(latest.date) : "미작성"}</td>
-                        <td>
-                          <button
-                            class="btn btn-light"
-                            type="button"
-                            onclick="selectTeacherStudent('${student.id}')"
-                          >
-                            보기
-                          </button>
-                        </td>
-                      </tr>
-                    `;
-                  }).join("")}
+                <tbody>
+                  ${
+                    classStudents.map(function (student) {
+                      return `
+                        <tr class="${
+                          student.id === selectedStudent.id
+                            ? "selected-row"
+                            : ""
+                        }">
+                          <td>${student.number}</td>
+
+                          <td>
+                            <strong>${escapeHtml(student.id)}</strong>
+                          </td>
+
+                          <td>
+                            ${
+                              student.realName
+                                ? escapeHtml(student.realName)
+                                : '<span class="danger-text">미등록</span>'
+                            }
+                          </td>
+
+                          <td>
+                            ${
+                              student.nickname
+                                ? escapeHtml(student.nickname)
+                                : '<span class="muted">미등록</span>'
+                            }
+                          </td>
+
+                          <td class="password-value">
+                            ${
+                              teacherShowPasswords
+                                ? escapeHtml(student.password)
+                                : "••••••"
+                            }
+                          </td>
+
+                          <td>${student.records.length}개</td>
+
+                          <td>
+                            <button
+                              class="btn btn-light"
+                              type="button"
+                              onclick="selectTeacherStudent('${student.id}')"
+                            >
+                              보기
+                            </button>
+                          </td>
+                        </tr>
+                      `;
+                    }).join("")
+                  }
                 </tbody>
               </table>
             </div>
@@ -1975,8 +2610,17 @@
           <div class="card">
             <div class="section-header">
               <div>
-                <h3>${escapeHtml(selectedStudent.name)}</h3>
-                <span class="muted small">${selectedStudent.id}</span>
+                <h3>
+                  ${
+                    selectedStudent.realName
+                      ? escapeHtml(selectedStudent.realName)
+                      : `${selectedStudent.number}번 학생`
+                  }
+                </h3>
+
+                <span class="muted small">
+                  ${escapeHtml(selectedStudent.id)}
+                </span>
               </div>
 
               <button
@@ -1988,6 +2632,41 @@
               </button>
             </div>
 
+            <div class="account-box">
+              <strong>아이디:</strong>
+              ${escapeHtml(selectedStudent.id)}<br>
+
+              <strong>본명:</strong>
+              ${
+                selectedStudent.realName
+                  ? escapeHtml(selectedStudent.realName)
+                  : "미등록"
+              }<br>
+
+              <strong>진로 별명:</strong>
+              ${
+                selectedStudent.nickname
+                  ? escapeHtml(selectedStudent.nickname)
+                  : "미등록"
+              }<br>
+
+              <strong>비밀번호:</strong>
+              <span class="password-value">
+                ${
+                  teacherShowPasswords
+                    ? escapeHtml(selectedStudent.password)
+                    : "숨김"
+                }
+              </span><br>
+
+              <strong>최초 설정:</strong>
+              ${
+                selectedStudent.firstLogin
+                  ? '<span class="danger-text">미완료</span>'
+                  : '<span class="success-text">완료</span>'
+              }
+            </div>
+
             <p>
               누적 기록:
               <strong>${selectedStudent.records.length}개</strong>
@@ -1997,8 +2676,15 @@
               ${
                 selectedStudent.records.length
                   ? [...selectedStudent.records]
-                      .sort((a, b) => b.date.localeCompare(a.date))
-                      .map(record => teacherRecordCard(selectedStudent, record))
+                      .sort(function (a, b) {
+                        return b.date.localeCompare(a.date);
+                      })
+                      .map(function (record) {
+                        return teacherRecordCard(
+                          selectedStudent,
+                          record
+                        );
+                      })
                       .join("")
                   : emptyState("아직 작성한 기록이 없습니다.")
               }
@@ -2012,16 +2698,30 @@
       const info = CATEGORY_INFO[record.category];
 
       return `
-        <div class="record-card" data-category="${record.category}">
+        <article
+          class="record-card"
+          data-category="${record.category}"
+        >
           <div class="record-meta">
-            <span class="badge">${info.icon} ${info.name}</span>
+            <span class="badge">
+              ${info.icon} ${info.name}
+            </span>
+
             <span class="badge">${record.week}주차</span>
           </div>
 
           <h3>${escapeHtml(record.title)}</h3>
-          <p>${escapeHtml(shorten(record.reflection || record.info, 130))}</p>
 
-          <label for="feedback-${record.id}">교사 피드백</label>
+          <p>
+            ${escapeHtml(
+              shorten(record.reflection || record.info, 150)
+            )}
+          </p>
+
+          <label for="feedback-${record.id}">
+            교사 피드백
+          </label>
+
           <textarea
             id="feedback-${record.id}"
             placeholder="구체적인 칭찬, 질문 또는 다음 탐색 방향을 입력하세요."
@@ -2034,13 +2734,15 @@
           >
             피드백 저장
           </button>
-        </div>
+        </article>
       `;
     }
 
     function changeTeacherClass(classNumber) {
+      teacherSelectedClass = Number(classNumber);
+
       const firstStudent = state.students.find(
-        student => student.classNumber === Number(classNumber)
+        student => student.classNumber === teacherSelectedClass
       );
 
       teacherSelectedStudentId = firstStudent.id;
@@ -2052,78 +2754,113 @@
       renderTeacherDashboard();
     }
 
+    function toggleTeacherPasswords() {
+      teacherShowPasswords = !teacherShowPasswords;
+      renderTeacherDashboard();
+    }
+
     function saveFeedback(studentId, recordId) {
-      const student = state.students.find(item => item.id === studentId);
-      const record = student.records.find(item => item.id === recordId);
+      const student = state.students.find(
+        item => item.id === studentId
+      );
+
+      const record = student.records.find(
+        item => item.id === recordId
+      );
 
       record.feedback =
-        document.getElementById(`feedback-${recordId}`).value.trim();
+        document
+          .getElementById(`feedback-${recordId}`)
+          .value
+          .trim();
 
       saveState();
-      showToast("학생에게 피드백을 저장했습니다.");
+      showToast("학생 기록에 피드백을 저장했습니다.");
     }
 
     function resetStudentPassword(studentId) {
-      if (!confirm("학생의 비밀번호를 1234로 초기화할까요?")) {
+      const student = state.students.find(
+        item => item.id === studentId
+      );
+
+      const studentName =
+        student.realName || student.id;
+
+      const answer = confirm(
+        `${studentName} 학생의 비밀번호를 1234로 초기화할까요?\n` +
+        "다음 로그인 때 본명, 별명, 새 비밀번호를 다시 확인하게 됩니다."
+      );
+
+      if (!answer) {
         return;
       }
 
-      const student = state.students.find(item => item.id === studentId);
       student.password = "1234";
-      saveState();
+      student.firstLogin = true;
 
-      showToast(`${student.name} 학생의 비밀번호를 1234로 초기화했습니다.`);
+      saveState();
+      renderTeacherDashboard();
+
+      showToast(
+        `${studentName} 학생의 비밀번호를 1234로 초기화했습니다.`
+      );
     }
 
-    /* =====================================================
-       12. 교사용 전체 학급 현황
-       ===================================================== */
+    /* ==================================================
+       13. 교사 학급별 현황
+       ================================================== */
     function renderTeacherOverview() {
-      setPageHeader(
-        "📈 학급별 누적 현황",
-        "5개 학급, 125명의 포트폴리오 작성 상황을 확인합니다."
-      );
-
       const totalRecords = state.students.reduce(
-        (sum, student) => sum + student.records.length,
+        function (sum, student) {
+          return sum + student.records.length;
+        },
         0
       );
 
-      const activeStudents = state.students.filter(
+      const profileCompleted = state.students.filter(
+        student => !student.firstLogin
+      ).length;
+
+      const writers = state.students.filter(
         student => student.records.length > 0
       ).length;
 
-      const noRecordStudents = state.students.length - activeStudents;
+      const classRows = [1, 2, 3, 4, 5].map(
+        function (classNumber) {
+          const students = state.students.filter(
+            student => student.classNumber === classNumber
+          );
 
-      const classRows = [1, 2, 3, 4, 5].map(classNumber => {
-        const students = state.students.filter(
-          student => student.classNumber === classNumber
-        );
+          return {
+            classNumber: classNumber,
+            profileCompleted: students.filter(
+              student => !student.firstLogin
+            ).length,
+            writers: students.filter(
+              student => student.records.length > 0
+            ).length,
+            records: students.reduce(
+              function (sum, student) {
+                return sum + student.records.length;
+              },
+              0
+            )
+          };
+        }
+      );
 
-        const records = students.reduce(
-          (sum, student) => sum + student.records.length,
-          0
-        );
-
-        const writers = students.filter(
-          student => student.records.length > 0
-        ).length;
-
-        return {
-          classNumber,
-          records,
-          writers,
-          noRecord: students.length - writers
-        };
-      });
+      setPageHeader(
+        "📈 학급별 누적 현황",
+        "5개 학급, 125명의 계정 설정과 포트폴리오 작성 현황입니다."
+      );
 
       document.getElementById("viewContainer").innerHTML = `
         <div class="stats-grid">
-          ${statCard("전체 학생", state.students.length, "total")}
-          ${statCard("누적 기록", totalRecords, "job")}
-          ${statCard("작성 학생", activeStudents, "major")}
-          ${statCard("미작성 학생", noRecordStudents, "school")}
-          ${statCard("운영 주차", 17, "activity")}
+          ${statCard("전체 학생", state.students.length, "")}
+          ${statCard("계정 설정 완료", profileCompleted, "blue")}
+          ${statCard("작성 학생", writers, "teal")}
+          ${statCard("누적 기록", totalRecords, "yellow")}
+          ${statCard("운영 주차", 17, "purple")}
         </div>
 
         <div class="card">
@@ -2134,22 +2871,27 @@
               <thead>
                 <tr>
                   <th>학급</th>
-                  <th>학생 수</th>
-                  <th>작성 학생</th>
-                  <th>미작성 학생</th>
+                  <th>전체 학생</th>
+                  <th>계정 설정 완료</th>
+                  <th>기록 작성 학생</th>
                   <th>누적 기록</th>
                 </tr>
               </thead>
+
               <tbody>
-                ${classRows.map(row => `
-                  <tr>
-                    <td>1학년 ${row.classNumber}반</td>
-                    <td>25명</td>
-                    <td>${row.writers}명</td>
-                    <td>${row.noRecord}명</td>
-                    <td>${row.records}개</td>
-                  </tr>
-                `).join("")}
+                ${
+                  classRows.map(function (row) {
+                    return `
+                      <tr>
+                        <td>1학년 ${row.classNumber}반</td>
+                        <td>25명</td>
+                        <td>${row.profileCompleted}명</td>
+                        <td>${row.writers}명</td>
+                        <td>${row.records}개</td>
+                      </tr>
+                    `;
+                  }).join("")
+                }
               </tbody>
             </table>
           </div>
@@ -2157,16 +2899,19 @@
       `;
     }
 
-    /* =====================================================
-       13. 데이터 내려받기
-       ===================================================== */
+    /* ==================================================
+       14. 학생 기록 내려받기
+       ================================================== */
     function exportMyData() {
       const student = getCurrentStudent();
 
       const exportData = {
         student: {
           id: student.id,
-          name: student.name
+          realName: student.realName,
+          nickname: student.nickname,
+          classNumber: student.classNumber,
+          number: student.number
         },
         exportedAt: new Date().toISOString(),
         records: student.records
@@ -2174,28 +2919,36 @@
 
       const blob = new Blob(
         [JSON.stringify(exportData, null, 2)],
-        { type: "application/json;charset=utf-8" }
+        {
+          type: "application/json;charset=utf-8"
+        }
       );
 
       const link = document.createElement("a");
-      link.href = URL.createObjectURL(blob);
-      link.download = `${student.id}-진로포트폴리오.json`;
-      link.click();
 
+      link.href = URL.createObjectURL(blob);
+      link.download =
+        `${student.id}-${student.realName || "학생"}-진로포트폴리오.json`;
+
+      link.click();
       URL.revokeObjectURL(link.href);
-      showToast("내 기록 파일을 저장했습니다.");
+
+      showToast("내 진로 기록 파일을 저장했습니다.");
     }
 
-    /* =====================================================
-       14. 공통 보조 기능
-       ===================================================== */
+    /* ==================================================
+       15. 공통 보조 기능
+       ================================================== */
     function goToView(view) {
       currentView = view;
 
       document
         .querySelectorAll(".nav-button[data-view]")
-        .forEach(button => {
-          button.classList.toggle("active", button.dataset.view === view);
+        .forEach(function (button) {
+          button.classList.toggle(
+            "active",
+            button.dataset.view === view
+          );
         });
 
       renderCurrentView();
@@ -2204,20 +2957,28 @@
     function emptyState(message) {
       return `
         <div class="empty-state">
-          <div style="font-size:38px; margin-bottom:10px;">📝</div>
+          <div style="font-size:38px; margin-bottom:10px;">
+            📝
+          </div>
+
           <strong>${escapeHtml(message)}</strong>
         </div>
       `;
     }
 
     function shorten(text, length) {
-      if (!text) return "";
-      return text.length > length ? `${text.slice(0, length)}…` : text;
+      if (!text) {
+        return "";
+      }
+
+      return text.length > length
+        ? `${text.slice(0, length)}…`
+        : text;
     }
 
-    /* 사용자 입력을 화면에 안전하게 표시하기 위한 처리입니다. */
+    /* 사용자 입력을 안전하게 화면에 표시합니다. */
     function escapeHtml(value) {
-      return String(value ?? "")
+      return String(value || "")
         .replaceAll("&", "&amp;")
         .replaceAll("<", "&lt;")
         .replaceAll(">", "&gt;")
@@ -2231,22 +2992,40 @@
 
     function showToast(message) {
       const toast = document.getElementById("toast");
+
       toast.textContent = message;
       toast.classList.remove("hidden");
 
       clearTimeout(showToast.timer);
 
-      showToast.timer = setTimeout(() => {
+      showToast.timer = setTimeout(function () {
         toast.classList.add("hidden");
       }, 2600);
     }
 
-    /* 모달 바깥 영역을 누르면 창을 닫습니다. */
-    document.getElementById("recordModal").addEventListener("click", event => {
-      if (event.target.id === "recordModal") {
-        closeRecordModal();
-      }
-    });
+    /* 모달의 바깥쪽을 눌렀을 때 기록 창을 닫습니다. */
+    document
+      .getElementById("recordModal")
+      .addEventListener("click", function (event) {
+        if (event.target.id === "recordModal") {
+          closeRecordModal();
+        }
+      });
+
+    /*
+      최초 로그인 설정 중에는 프로필 모달 바깥을 눌러도
+      창이 닫히지 않습니다.
+    */
+    document
+      .getElementById("profileModal")
+      .addEventListener("click", function (event) {
+        if (
+          event.target.id === "profileModal" &&
+          event.currentTarget.dataset.firstLogin !== "true"
+        ) {
+          closeProfileModal();
+        }
+      });
   </script>
 </body>
 </html>
